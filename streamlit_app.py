@@ -48,7 +48,7 @@ def generate_exams():
 
         number_of_questions = {}
         for name in sheet_names:
-            with st.expander(name):
+            with st.expander(name,expanded=True):
                 selected_number = st.number_input(f"Please enter the number of questions from {name}: ", min_value=0, max_value=10000, step=1)
                 number_of_questions[name] = selected_number
 
